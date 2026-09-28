@@ -81,3 +81,32 @@ flowchart LR
 README не должен утверждать больше, чем подтверждают код, тесты и сохранённые артефакты. Для рыночных/экономических проектов backtest или внутренняя переоценка не равны реализованной внешней прибыли; для AI/infra проектов benchmark или диаграмма не равны production-надежности.
 
 <!-- SYNERGY-FEDERATION-PASSPORT:END -->
+
+---
+
+# 🌊 Глубокий доказательный паспорт Global Liquidity Miner
+
+## Реальность `main`
+
+В repo всего один implementation file `global_liquidity_dataminer.py` плюс README. Следовательно, численные claims в README (`+1% liquidity → +0.7% EURUSD`, 1–5 day forecasts и т.п.) являются **historical research claims**, пока нет frozen dataset/report рядом с кодом.
+
+```mermaid
+flowchart LR
+    CB[Central-bank data] --> FXN[FX normalization]
+    FXN --> GLI[Global Liquidity Index]
+    GLI --> FEAT[Macro features]
+    FEAT --> MODEL[Forecast model]
+    MODEL --> OOS[Required time-series OOS]
+```
+
+## Критические methodological gates
+
+- publication/revision lag центральных банков;
+- currency conversion timing;
+- no revised future macro data in historical features;
+- train-only normalization/weights;
+- compare against simple macro and price-only baselines;
+- rolling/expanding OOS, not random CV;
+- distinguish correlation from causal liquidity effect.
+
+До этого repo — valuable macro feature R&D, но не validated forecast authority.
