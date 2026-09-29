@@ -290,6 +290,21 @@ It should provide evidence/features, never trade authorization.
 - that forecast is profitable;
 - that current prototype is institutional macro research quality.
 
+## 21. 🛡️ Authority boundaries
+
+Этот repository имеет только research/data-feature role.
+
+```text
+macro proxy          != official central-bank fact
+liquidity index      != monetary-policy authority
+RandomForest forecast!= trade authorization
+test R²              != calibrated probability
+feature importance   != causality
+forecast JSON        != broker order
+```
+
+Any downstream strategy must pass independent validation/risk/execution gates. Official macro claims should cite official source series, not reconstructed FX proxies.
+
 ---
 
 [🧭 SYNERGY SYSTEM](https://github.com/Shtenco/synergy_system) · [📚 Atlas](https://github.com/Shtenco/synergy_system/blob/main/docs/SYNERGY_REPOSITORY_ATLAS.md)
